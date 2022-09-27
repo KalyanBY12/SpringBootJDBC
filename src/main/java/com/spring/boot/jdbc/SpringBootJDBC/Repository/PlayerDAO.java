@@ -1,4 +1,4 @@
-package com.spring.boot.jdbc.SpringBootJDBC;
+package com.spring.boot.jdbc.SpringBootJDBC.Repository;
 
 import com.spring.boot.jdbc.SpringBootJDBC.Entity.Player;
 import org.springframework.beans.factory.annotation.Autowired;
