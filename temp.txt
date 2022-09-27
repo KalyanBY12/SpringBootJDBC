@@ -1,0 +1,15 @@
+schema.sql
+--CREATE TABLE Player(
+--    ID INTEGER NOT NULL,
+--    Name VARCHAR(255) NOT NULL,
+--    Age INTEGER NOT NULL,
+--    Nationality VARCHAR(30) NOT NULL,
+--    Dob TIMESTAMP,
+--    Designation INTEGER,
+--    PRIMARY KEY(ID)
+--);
+
+
+data.sql
+INSERT INTO PLAYER VALUES(1,'KC',22,'INDIAN','2000-01-01',1);
+INSERT INTO PLAYER VALUES(2,'BC',23,'INDIAN','2000-03-01',10);

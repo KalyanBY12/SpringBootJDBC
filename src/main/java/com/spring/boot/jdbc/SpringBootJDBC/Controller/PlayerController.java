@@ -1,4 +1,6 @@
-package com.spring.boot.jdbc.SpringBootJDBC;
+package com.spring.boot.jdbc.SpringBootJDBC.Controller;
+import com.spring.boot.jdbc.SpringBootJDBC.Entity.Player;
+import com.spring.boot.jdbc.SpringBootJDBC.PlayerDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,4 +19,8 @@ public class PlayerController {
     {
         return getALlPlayerdb();
     }
+
+   //@GetMapping("/playerById")
+   // public Player getPlayer
+
 }

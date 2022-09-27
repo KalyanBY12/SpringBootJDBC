@@ -1,25 +1,36 @@
-package com.spring.boot.jdbc.SpringBootJDBC;
+package com.spring.boot.jdbc.SpringBootJDBC.Entity;
 
 
-import javax.xml.crypto.Data;
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "Player")
 public class Player
 {
-    private int pid;
+    @Id
+    @GeneratedValue
+    private int id;
+
+    @Column(name = "Name")
     private String name;
+
+    @Column(name = "Age")
     private int age;
+
+    @Column(name = "Nationality")
     private String nationality;
+
+    @Column(name = "DOB")
     private Date dob;
+
+    @Column(name = "Designation")
     private int designation;
 
-    public Player()
-    {
+    public Player() {}
 
-    }
-    public Player(int pid, String name, int age, String nationality, Date dob, int designation)
-    {
-        this.pid = pid;
+    public Player(int id, String name, int age, String nationality, Date dob, int designation) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.nationality = nationality;
@@ -27,12 +38,21 @@ public class Player
         this.designation = designation;
     }
 
-    public int getPid() {
-        return pid;
+    public Player(String name, int age, String nationality, Date dob, int designation)
+    {
+        this.name = name;
+        this.age = age;
+        this.nationality = nationality;
+        this.dob = dob;
+        this.designation = designation;
     }
 
-    public void setPid(int pid) {
-        this.pid = pid;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -76,15 +96,7 @@ public class Player
     }
 
     @Override
-    public String toString()
-    {
-        return "Player{" +
-                "pid=" + pid +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", nationality='" + nationality + '\'' +
-                ", dob=" + dob +
-                ", designation=" + designation +
-                '}';
+    public String toString() {
+        return "Player{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", nationality='" + nationality + '\'' + ", dob=" + dob + ", designation=" + designation + '}';
     }
 }
